@@ -1,12 +1,10 @@
-package mum.edu.DAO;
+/*package mum.edu.DAO;
 
 import java.util.List;
 
+import javax.management.Query;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
 
 import mum.edu.models.Artist;
 import mum.edu.util.EntityManagerUtil;
@@ -58,3 +56,4 @@ public class ArtistDAOImp implements ArtistDAO {
 	}
 
 }
+*/

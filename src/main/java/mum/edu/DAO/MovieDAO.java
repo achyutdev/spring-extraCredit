@@ -13,7 +13,7 @@ public interface MovieDAO {
 	
 	public List<Movie> getAllMovie();
 
-	public Movie getMovie(int id);
+/*	public Movie getMovie(int id);
 
 	public List<Movie> getAllMovieGenre(Genre genre);
 
@@ -29,6 +29,6 @@ public interface MovieDAO {
 	
 	public void deleteArtist(Artist artist);
 	
-	public void updateArtist(Artist artist);
+	public void updateArtist(Artist artist);*/
 
 }

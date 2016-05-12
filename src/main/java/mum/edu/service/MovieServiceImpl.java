@@ -20,7 +20,7 @@ public class MovieServiceImpl implements MovieService {
 		return movieDAO.getAllMovie();
 	}
 	
-	public Movie find(int id){
+/*	public Movie find(int id){
 		return movieDAO.getMovie(id);
 	}
 	
@@ -53,7 +53,7 @@ public class MovieServiceImpl implements MovieService {
 	public List<Director> findDirector(String movieName) {
 		return movieDAO.findAllDirector(movieName);
 	}
-
+*/
 	
 	
 }

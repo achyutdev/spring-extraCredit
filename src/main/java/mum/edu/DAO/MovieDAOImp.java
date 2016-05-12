@@ -3,31 +3,28 @@ package mum.edu.DAO;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 import mum.edu.models.Artist;
 import mum.edu.models.Characters;
 import mum.edu.models.Director;
 import mum.edu.models.Genre;
 import mum.edu.models.Movie;
-import mum.edu.util.EntityManagerUtil;
 
 public class MovieDAOImp implements MovieDAO{
 
-	EntityManager em = EntityManagerUtil.getInstance().createEntityManager();
-	EntityTransaction tx = em .getTransaction();
+	SessionFactory sessionFectory;
 	
 	public List<Movie> getAllMovie() {
-		tx.begin();
-		Query query = em.createQuery("Select m FROM Movie m");
-		List<Movie> movies = query.getResultList();
-		tx.commit();
+		Session session = this.sessionFectory.openSession();
+		List<Movie> movies = session.createQuery("from Movie").list();
 		return movies;
 	}
 
-	public Movie getMovie(int id) {
+	/*public Movie getMovie(int id) {
 		tx.begin();
 		Query query = em.createQuery("SELECT a FROM Movie a WHERE a.id = :id");
 		query.setParameter("id",id);
@@ -94,6 +91,6 @@ public class MovieDAOImp implements MovieDAO{
 	public void updateArtist(Artist artist) {
 		// TODO Auto-generated method stub
 		
-	}
+	}*/
 
 }

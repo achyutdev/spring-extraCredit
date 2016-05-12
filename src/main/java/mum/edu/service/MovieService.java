@@ -11,7 +11,7 @@ public interface MovieService {
 	
 	List<Movie> findAll();
 
-	Movie find(int id);
+	/*Movie find(int id);
 
 	List<Movie> findAll(Genre genre);
 
@@ -21,6 +21,6 @@ public interface MovieService {
 
 	List<Characters> findCharacters(String string);
 
-	List<Director> findDirector(String string);
+	List<Director> findDirector(String string);*/
 
 }
